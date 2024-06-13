@@ -1,0 +1,18 @@
+package CrudPi.workDoorCrud.domain.usuario.repository;
+
+import CrudPi.workDoorCrud.domain.usuario.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Optional;
+
+public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
+
+    Optional findByemailUsuario(String email);
+    Optional <Usuario> findByIdUsuario(int id);
+    Optional <Usuario> findById(int id);
+
+
+
+}
